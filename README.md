@@ -20,7 +20,7 @@ Presets need to be valid JSON and the file must end in `.json`. Run your preset 
 
 ## Using Presets
 
-You can test out presets [here](http://tonejs.github.io/Presets/preview/). Once you've fine-tuned your preset, use it in the constructor of your object or with the `set` method.
+You can test out presets [here](http://tonejs.github.io/Presets/listen/). Once you've fine-tuned your preset, use it in the constructor of your object or with the `set` method.
 
 For example, here is a Distortion preset:
 
