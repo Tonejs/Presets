@@ -1,0 +1,12 @@
+{
+	"baseFrequency": 250,
+	"octaves": 3.1,
+	"sensitivity": 0,
+	"Q": 2,
+	"gain": 5,
+	"rolloff": -24,
+	"follower": {
+		"attack": 0.3,
+		"release": 0.1
+	}
+}

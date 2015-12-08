@@ -1,0 +1,6 @@
+{
+	"frequency" : 10,
+	"type" : "sine",
+	"depth" : 0.5,
+	"spread" : 180
+}

@@ -1,0 +1,8 @@
+{
+	"frequency": 0.2,
+	"delayTime": 20,
+	"type": "sine",
+	"depth": 1,
+	"feedback": 0.45,
+	"spread": 180
+}

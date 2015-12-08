@@ -1,0 +1,53 @@
+{
+	"effect": {
+		"AutoFilter": [
+			"Springy.json",
+			"Talker.json",
+			"Yes.json"
+		],
+		"Chebyshev": [
+			"CoinOperated.json",
+			"Hornsy.json",
+			"Peaker.json"
+		],
+		"Chorus": [
+			"Ether.json",
+			"Harmony.json",
+			"Rattler.json"
+		],
+		"Distortion": [
+			"Clean.json",
+			"Growl.json",
+			"Saturate.json",
+			"Thick.json"
+		],
+		"FeedbackDelay": [
+			"Counterpoints.json",
+			"DecayDelay.json",
+			"Minimalist.json"
+		],
+		"Freeverb": [
+			"Bigplate.json",
+			"Glassroom.json",
+			"Sewer.json"
+		],
+		"JCReverb": [
+			"BounceHall.json",
+			"NotNormal.json",
+			"QuickSlap.json"
+		],
+		"Phaser": [
+			"Bubbles.json",
+			"Landing.json",
+			"Testing.json"
+		],
+		"PingPongDelay": [
+			"RhythmicDelay.json",
+			"SlowSteady.json",
+			"ThickStereo.json"
+		]
+	},
+	"instrument": {
+		"SimpleSynth": []
+	}
+}

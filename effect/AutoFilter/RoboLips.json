@@ -1,0 +1,12 @@
+{
+	"frequency": 5,
+	"type": "square4",
+	"depth": 0.4,
+	"baseFrequency": 150,
+	"octaves": 3.1,
+	"filter": {
+		"type": "lowpass",
+		"rolloff": -24,
+		"Q": 4
+	}
+}

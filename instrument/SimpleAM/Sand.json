@@ -1,0 +1,25 @@
+{
+	"harmonicity": 3,
+	"carrier": {
+		"oscillator": {
+			"type": "square"
+		},
+		"envelope": {
+			"attack": 0.003,
+			"decay": 0.3,
+			"sustain": 0.7,
+			"release": 0.8
+		}
+	},
+	"modulator": {
+		"oscillator": {
+			"type": "sine"
+		},
+		"envelope": {
+			"attack": 0.04,
+			"decay": 0.1,
+			"sustain": 0.04,
+			"release": 0.04
+		}
+	}
+}

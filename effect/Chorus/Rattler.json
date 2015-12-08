@@ -1,0 +1,8 @@
+{
+	"frequency" : "16n", 
+	"delayTime" : 15,
+	"type" : "square",
+	"depth" : 0.2,
+	"feedback" : 0.3,
+	"spread" : 80
+}

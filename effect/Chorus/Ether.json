@@ -1,0 +1,8 @@
+{
+	"frequency": 0.3,
+	"delayTime": 8,
+	"type": "triangle",
+	"depth": 0.8,
+	"feedback": 0.4,
+	"spread": 180
+}
