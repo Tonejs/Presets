@@ -1,5 +1,3 @@
-Sound design presets and starting points for Tone.js. 
-
 ## Reason
 
 This repo is meant to be a resources for presets and musical inspiration. Contributions are encouraged!
