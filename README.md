@@ -2,11 +2,9 @@
 
 This repo is meant to be a resources for presets and musical inspiration. Contributions are encouraged!
 
-## Contributing
-
-Contributions are very welcome. Once your pull request is merged, your presets will be browse-able in this repo and downloadable from the gh-pages branch [here](http://tonejs.github.io/Presets/instrument/MonoSynth/Bah.json). 
-
 ### Contribution Guidelines
+
+Please contribute!
 
 #### Folder
 
