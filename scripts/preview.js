@@ -3,8 +3,8 @@ $(function(){
 	var topbar = $("#Topbar");
 
 	//add the logo
-	var logo = new Tone.Logo({
-		"container" : topbar,
+	Logo({
+		"container" : topbar.get(0),
 		"height" : topbar.height() - 6,
 		"width" : 140
 	});
@@ -12,76 +12,44 @@ $(function(){
 	$("#Presets").on("keypress keydown", function(e){
 		e.stopPropagation();
 	});
-
-	/**
-	 *  EFFECT 
-	 */
 	
-	var dryWet = $("#Effects #DryWet input")
-		.on("input", function(){
-			effect.wet.value = parseInt(dryWet.val()) / 100;
-		});
-	
-	window.effect = new Tone.FeedbackDelay().toMaster();
-	window.instrument = new Tone.SimpleSynth().connect(effect);
-
-	makePresetOptions("#Effects", "effect", function(className){
-		instrument.disconnect();
-		effect.dispose();
-		effect = new Tone[className]().toMaster();
-		instrument.connect(effect);
-		effect.wet.value = parseInt(dryWet.val()) / 100;
-		//start it if it needs
-		if (typeof effect.start === "function"){
-			effect.start();
-		}
-	}, function(json){
-		effect.set(json);
-		if (json.wet){
-			dryWet.val(json.wet * 100);
-		}
-	});
+	var instrument = new Tone.Synth().toMaster();
 
 	/**
 	 *  INSTRUMENT
 	 */
 
-
-
 	makePresetOptions("#Instruments", "instrument", function(className){
 		instrument.dispose();
-		instrument = new Tone[className]().connect(effect);
+		instrument = new Tone[className]().toMaster();
 	}, function(json){
 		instrument.dispose();
 		//make a new one
-		instrument = new Tone[instrument.toString()](json).connect(effect);
+		instrument = new Tone[instrument.toString()](json).toMaster();
 	});
 
 	/**
 	 * 	KEYBOARD 
 	 */
-	var keyboard = new QwertyHancock({
-		id: "Keyboard",
-		width: $("#Keyboard").width(),
-		height: 150,
-		octaves: 3,
-		startNote: "C2",
-		whiteKeyColour: "white",
-		blackKeyColour: "#ECECEC",
-		activeColour : "#7F33ED"
+	var keyboard = new AudioKeys({
+		polyphony: 1,
+		rows: 1,
+		priority: "last"
 	});
 
-	keyboard.keyDown = function (note) {
+
+	keyboard.down(function (note) {
+		console.log(note);
 		if (instrument.toString() === "NoiseSynth"){
 			instrument.triggerAttack();
 		} else {
-		    instrument.triggerAttack(note);
+		    instrument.triggerAttack(note.frequency);
 		}
-	};
+	});
 
-	keyboard.keyUp = function (note) {
+	keyboard.up(function (note) {
 	    instrument.triggerRelease();
-	};
+	});
 
 });
 

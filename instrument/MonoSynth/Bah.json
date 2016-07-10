@@ -1,5 +1,5 @@
 {
-	"volume" : 10,
+    "volume" : 10,
     "oscillator": {
         "type": "sawtooth"
     },
