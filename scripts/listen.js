@@ -19,7 +19,7 @@ function loadPreset(inst, preset){
 	xhr.onreadystatechange = function() {
 		if (xhr.readyState == 4 && xhr.status == 200) {
 			codemirror.setValue(xhr.responseText);
-			setCurrentPreset();
+			setCurrentPreset(xhr.responseText);
 		}
 	};
 	xhr.open("GET", url, true);
@@ -28,9 +28,9 @@ function loadPreset(inst, preset){
 	document.querySelector("#Preset select").value = preset;
 }
 
-function setCurrentPreset(){
+function setCurrentPreset(preset){
 	try {
-		instrument.set(JSON.parse(codemirror.getValue()));
+		instrument.set(JSON.parse(preset));
 	} catch(e){
 		// indicate the error
 		codemirror.getWrapperElement().classList.add("Error");
@@ -45,7 +45,7 @@ function setupEvents(){
 	var listenButton = document.querySelector("button");
 	listenButton.addEventListener("click", function(e){
 		//get the apply the preset
-		setCurrentPreset();
+		setCurrentPreset(codemirror.getValue());
 	}, true);
 }
 
@@ -121,6 +121,7 @@ function dropDownEvents(){
 
 	var instruments = document.querySelector("#Names select");
 	instruments.addEventListener("input", function(e){
+		makeInstrument(instruments.value);
 		makePresetDropDown(instruments.value);
 	}, false);
 }
@@ -145,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	codemirror.addKeyMap({
 		"Cmd-Enter": function(){
-			setCurrentPreset();
+			setCurrentPreset(codemirror.getValue());
 			document.querySelector("button").focus();
 		}
 	});
