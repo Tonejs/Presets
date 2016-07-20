@@ -1,5 +1,5 @@
 {
-	"portamento": 0.01,
+    "portamento": 0.01,
     "oscillator": {
         "type": "sawtooth"
     },

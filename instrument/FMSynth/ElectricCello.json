@@ -1,26 +1,22 @@
 {
     "harmonicity": 3.01,
     "modulationIndex": 14,
-    "carrier": {
-        "oscillator": {
-            "type": "triangle"
-        },
-        "envelope": {
-            "attack": 0.2,
-            "decay": 0.3,
-            "sustain": 0.1,
-            "release": 1.2
-        }
+    "oscillator": {
+        "type": "triangle"
     },
-    "modulator": {
-        "oscillator": {
-            "type": "square"
-        },
-        "envelope": {
-            "attack": 0.01,
-            "decay": 0.5,
-            "sustain": 0.2,
-            "release": 0.1
-        }
+    "envelope": {
+        "attack": 0.2,
+        "decay": 0.3,
+        "sustain": 0.1,
+        "release": 1.2
+    },
+    "modulation" : {
+        "type": "square"
+    },
+    "modulationEnvelope" : {
+        "attack": 0.01,
+        "decay": 0.5,
+        "sustain": 0.2,
+        "release": 0.1
     }
 }

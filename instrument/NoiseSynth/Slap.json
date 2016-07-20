@@ -1,25 +1,12 @@
 {
     "noise": {
-        "type": "pink",
+        "type": "white",
         "playbackRate" : 5
-    },
-    "filter": {
-        "type": "highpass",
-        "rolloff": -12,
-        "Q": 3
     },
     "envelope": {
         "attack": 0.001,
         "decay": 0.3,
         "sustain": 0,
         "release": 0.3
-    },
-    "filterEnvelope": {
-        "baseFrequency": 700,
-        "octaves": 2,
-        "attack": 0.002,
-        "decay": 0.001,
-        "sustain": 0,
-        "release": 0.001
     }
 }

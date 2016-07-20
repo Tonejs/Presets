@@ -1,5 +1,5 @@
 {
-	 "oscillator": {
+     "oscillator": {
         "type": "sawtooth"
     },
     "filter": {
